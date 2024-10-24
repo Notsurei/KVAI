@@ -34,6 +34,8 @@ const handleStripePayment = async(req, res) => {
 
 const handleFreeSubscription = async(req, res) => {
     const user = req?.user;
+
+
     try {
         if(renewSubcripstionPlan(user)){
             user.subscriptionPlan = 'Free';

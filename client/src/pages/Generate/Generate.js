@@ -59,8 +59,8 @@ export default function Generate() {
             <div className="flex-grow overflow-y-auto p-4 border-purple-500 bg-zinc-700 rounded shadow">
                 {chats.map((chat, index) => (
                     <div key={index} className="mb-4">
-                        <p className="text-blue-500"><strong>You:</strong> {chat.prompt}</p>
-                        <p className="text-green-500"><strong>AI:</strong> {chat.response}</p>
+                        <p className="text-blue-500 chat-bubble"><strong>You:</strong> {chat.prompt}</p>
+                        <p className="text-green-500 chat-bubble"><strong>AI:</strong> {chat.response}</p>
                     </div>
                 ))}
                 {error && <p className="text-red-500">{error}</p>}

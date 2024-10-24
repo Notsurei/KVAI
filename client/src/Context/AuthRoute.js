@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from './AuthContext';
 import { Navigate, useLocation } from 'react-router-dom';
+import AuthCheckingComponent from './AuthChecking';
 
 export default function AuthRoute({ children }) {
     const location = useLocation();
@@ -18,7 +19,7 @@ export default function AuthRoute({ children }) {
     }, [isAuthenticated]);
 
     if (isLoading) {
-        return <span className="loading loading-spinner text-primary"></span>;
+        return <AuthCheckingComponent/>
     }
 
     if (!isAuthenticated) {

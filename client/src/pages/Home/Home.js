@@ -1,7 +1,8 @@
-// import HomeFeatures from "./HomeFeatures";
-// import FreeTrial from "./FreeTrial";
 import ai from "../../img/ai.png";
 import { Link } from "react-router-dom";
+
+
+
 export default function Home() {
   return (
     <>
@@ -37,26 +38,26 @@ export default function Home() {
             </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Masync AI Content Generator
+                KVAI Content Generator
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                Masync is a content generator that uses AI to generate content
+                KVAI is a content generator that uses AI to generate content
                 for you. It is a tool that helps you generate content for your
                 blog, website, or social media.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
-                  to="free-plan"
+                  to="/pricing"
                   className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  Start 3 Day Free Trial
+                  Start For Free
                 </Link>
-                <Link
+                {/* <Link
                   to="free-plan"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   Learn more <span aria-hidden="true">→</span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -74,10 +75,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Homepage features */}
-      {/* <HomeFeatures /> */}
-      {/* Homepage CTA */}
-      {/* <FreeTrial /> */}
     </>
   );
 }

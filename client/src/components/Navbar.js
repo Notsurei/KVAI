@@ -1,10 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { RiRobot3Fill } from "react-icons/ri";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdOutlinePayment } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import { useAuth } from "../Context/AuthContext";
+
 
 export default function NavBar() {
     const { logout, isAuthenticated } = useAuth();
@@ -26,12 +27,10 @@ export default function NavBar() {
         e.preventDefault();
         SendRequest();
         navigate('/');
-
     }
 
-
     return (
-        <nav className="w-full shadow" onSubmit={handleSubmit}>
+        <nav className="w-full shadow " onSubmit={handleSubmit}>
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex flex-row items-center justify-between py-3 md:py-5 md:block">
@@ -62,6 +61,12 @@ export default function NavBar() {
                                     <span>About Us</span>
                                 </Link>
                             </li>
+                            {isAuthenticated && <li className="text-gray-600 hover:text-blue-600">
+                                <Link to="/pricing" className="flex items-center space-x-2">
+                                    <MdOutlinePayment />
+                                    <span>Pricing</span>
+                                </Link>
+                            </li>}
                             {isAuthenticated && <li>
                                 <button className='btn decoration-0 bg-gradient-to-r from-purple-500 to-pink-500'>
                                     <Link className='text-white flex items-center animate-bounce' to='/generate'>
