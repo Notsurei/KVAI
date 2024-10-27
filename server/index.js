@@ -104,7 +104,7 @@ app.listen(port, () => {
 });
 
 
-mongoose.connect('mongodb+srv://khoivo7703:khoi123@mern-ai.at2m8uj.mongodb.net/users?retryWrites=true&w=majority&appName=mern-ai').then(() => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('database connected');
 }).catch((error) => {
     console.log(error);
