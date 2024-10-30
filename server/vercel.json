@@ -1,8 +1,5 @@
 {
-    "rewrites": [
-      { "source": "/api/auth/(.*)", "destination": "/api/auth/$1" },
-      { "source": "/api/AI/(.*)", "destination": "/api/AI/$1" },
-      { "source": "/api/stripe/(.*)", "destination": "/api/stripe/$1" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [{"src": "./index.js", "use": "@vercel/node"}],
+  "routes": [{"src": "/(.*)", "dest": "/"}]
+}
