@@ -30,6 +30,11 @@ app.use('/api/stripe', StripeRouter);
 
 app.use(errorHandle);
 
+app.get('/', (req, res) => {
+    res.send('hello');
+});
+    
+
 //trial plan
 cron.schedule('0 0 * * * *', async() => {
     try {
