@@ -7,7 +7,7 @@ const FreePlanSignup = () => {
 
     const sendRequest = async() => {
         try {
-            const res = await axios.post('http://localhost:4000/api/stripe/free-plan', {}, {
+            const res = await axios.post('https://kvai.onrender.com//api/stripe/free-plan', {}, {
                 withCredentials: true
             });
             return res.data;
