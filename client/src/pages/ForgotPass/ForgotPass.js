@@ -11,7 +11,7 @@ export default function ForgotPass() {
     });
 
     const sendRequest = async() => {
-        const res = await axios.post('http://localhost:4000/api/auth/forgotpassword',{
+        const res = await axios.post('https://kvai.onrender.com/api/auth/forgotpassword',{
             email:input.email
         });
 
