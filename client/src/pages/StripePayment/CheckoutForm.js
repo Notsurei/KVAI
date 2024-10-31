@@ -13,7 +13,7 @@ export default function CheckoutForm() {
     const [errorMessage, setErrorMessage] = useState(null);
 
     const sendRequest = async(payload) => {
-        const res = await axios.post('http://localhost:4000/api/stripe/checkout',{
+        const res = await axios.post('https://kvai.onrender.com/stripe/checkout',{
             amount:Number(payload.amount),
             subscriptionPlan: payload.plan
         },{
