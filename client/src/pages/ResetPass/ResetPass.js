@@ -14,7 +14,7 @@ export default function ResetPass() {
     });
 
     const sendRequest = async() => {
-        const res = await axios.post('http://localhost:4000/api/auth/resetpassword',{
+        const res = await axios.post('https://kvai.onrender.com/api/auth/resetpassword',{
             email:input.email,
             resetToken: input.resetToken,
             newPassword: input.newPassword
