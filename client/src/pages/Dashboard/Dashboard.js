@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
 
   const SendRequest = async () => {
-    const res = await axios.get("http://localhost:4000/api/auth/profile", {
+    const res = await axios.get("https://kvai.onrender.com//api/auth/profile", {
       withCredentials: true,
     });
 
