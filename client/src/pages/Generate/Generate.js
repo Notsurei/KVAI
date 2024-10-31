@@ -20,7 +20,7 @@ export default function Generate() {
 
     const sendRequest = async () => {
         try {
-            const res = await axios.post('http://localhost:4000/api/AI/generate', {
+            const res = await axios.post('https://kvai.onrender.com/api/AI/generate', {
                 prompt: input.prompt
             }, {
                 withCredentials: true
