@@ -22,7 +22,7 @@ export default function Register() {
 
   const SendRequest = async() => {
     try{
-      const res = await axios.post('http://localhost:4000/api/auth/register',{
+      const res = await axios.post('https://kvai.onrender.com/api/auth/register',{
       username: input.username,
       email:input.email,
       password: input.password
