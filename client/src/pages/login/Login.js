@@ -23,7 +23,7 @@ export default function Login() {
 
   const SendRequest = async () => {
     try {
-      const res = await axios.post('http://localhost:4000/api/auth/login', {
+      const res = await axios.post('https://kvai.onrender.com/api/auth/login', {
         email: input.email,
         password: input.password
       }, {
