@@ -12,7 +12,7 @@ const PaymentSuccess = () => {
 
   const verifyPayment = async (paymentID) => {
     try {
-      const res = await axios.post(`http://localhost:4000/api/stripe/verify-payment/${paymentID}`, {}, {
+      const res = await axios.post(`https://kvai.onrender.com/api/stripe/verify-payment/${paymentID}`, {}, {
         withCredentials: true
       });
       return res.data;
