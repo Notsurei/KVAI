@@ -16,7 +16,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://kvai-client.onrender.com/',
     credentials: true
 }));
 app.use(express.json());
