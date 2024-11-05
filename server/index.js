@@ -14,9 +14,12 @@ const User = require('./models/User');
 
 const app = express();
 
-
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://kvai-client.onrender.com' /
+];
 app.use(cors({
-    origin: 'https://kvai-client.onrender.com/',
+    origin: allowedOrigins,
     credentials: true
 }));
 app.use(express.json());
