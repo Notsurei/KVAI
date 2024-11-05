@@ -26,6 +26,8 @@ export default function Register() {
       username: input.username,
       email:input.email,
       password: input.password
+      }{
+        headers: { 'Content-Type': 'application/json' }
       });
 
       return res.data;
