@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
     const sendRequest = async () => {
         try {
-            const res = await axios.get('http://localhost:4000/api/auth/checkauth', {
+            const res = await axios.get('https://kvai.onrender.com/api/auth/checkauth', {
                 withCredentials: true
             });
             setIsAuthenticated(res.data);
