@@ -15,7 +15,6 @@ const User = require('./models/User');
 const app = express();
 
 const allowedOrigins = [
-    'http://localhost:3000',
     'https://kvai-client.onrender.com' /
 ];
 app.use(cors({
