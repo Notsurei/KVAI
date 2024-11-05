@@ -33,7 +33,7 @@ export default function Register() {
       return res.data;
     }
     catch(error){
-      console.error(error)
+      console.log(error)
     }
   };
 
