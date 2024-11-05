@@ -16,7 +16,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://kvai.vercel.app/',
+    origin: 'https://kvai.vercel.app',
     credentials: true
 }));
 app.use(express.json());
